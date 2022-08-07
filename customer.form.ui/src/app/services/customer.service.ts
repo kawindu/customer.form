@@ -11,7 +11,7 @@ import { Customer } from '../models/Customer';
 export class CustomerService {
   
  
-private apiURL = "https://localhost:44329/v1/";
+private apiURL = "https://localhost:44356/Customer/v1/";
     
 httpOptions = {
   headers: new HttpHeaders({
@@ -22,7 +22,7 @@ httpOptions = {
 constructor(private httpClient: HttpClient) { }
 
 saveCustomer(customer : Customer): Observable<Customer> {
-    return this.httpClient.post<Customer>(this.apiURL + 'Customer/', JSON.stringify(customer), this.httpOptions)
+    return this.httpClient.post<Customer>(this.apiURL + 'PostDetails/', JSON.stringify(customer), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )

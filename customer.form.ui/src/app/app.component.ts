@@ -11,6 +11,7 @@ import { Customer } from '../app/models/Customer';
 export class AppComponent {
   title = 'Customer Form';
   customerform: FormGroup;
+  response = '';
 
   constructor(
     private formBuilder: FormBuilder,
@@ -25,8 +26,8 @@ export class AppComponent {
   onSubmit(formData: Customer) {
     if (this.customerform.invalid)
       return
-
-    this.customerService.saveCustomer(this.customerform.value).subscribe((formData: Customer) => {
+      this.customerService.saveCustomer(this.customerform.value).subscribe((data: Customer) => {
+        this.response = data.firstName + ' sucessfully added.';
     });
   }
 }
