@@ -1,0 +1,23 @@
+<div class="container">
+  <form [formGroup]="customerform" (ngSubmit)="onSubmit(customerform.value)" class="customer-form">
+    <h1>{{title}}</h1>
+
+    <div>
+      <mat-form-field class="customer-inputbox" appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="Enter first name" formControlName="firstName" id="firstName">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="customer-inputbox" appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Enter last name" formControlName="lastName" id="lastName">
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+
+  </form>
+
+</div>

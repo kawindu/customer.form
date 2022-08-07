@@ -1,0 +1,37 @@
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(184, 187, 182), rgb(185, 181, 181));
+    font-family: "Sansita Swashed", cursive;
+
+    .customer-form {
+        position: relative;
+        padding: 50px 50px;
+        background: #fff;
+        border-radius: 10px;
+        width: 20%;
+    }
+
+    h1 {
+        font-size: 2em;
+        border-left: 5px solid dodgerblue;
+        padding: 10px;
+        color: #000;
+        letter-spacing: 5px;
+        margin-bottom: 60px;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+
+    .customer-inputbox {
+        position: relative;
+        width: 300px;
+        height: 50px;
+        margin-bottom: 50px;
+    }
+}
